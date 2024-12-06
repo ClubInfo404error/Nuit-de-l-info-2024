@@ -1,0 +1,53 @@
+#level1 {
+    background: url('https://i.pinimg.com/736x/a0/ef/55/a0ef558a8e3f5d02315df24d868c315c--sun-rays-scuba-diving.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.titre-level-1 {
+    margin-bottom: 200px;
+}
+
+.animations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Rajouter style pour display-4 */
+.display-4 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #343838;
+}
+
+.waves {
+    width: 200px;
+    height: 100px;
+    background: url('https://i.imgur.com/8K3VZ3e.png') repeat-x;
+    position: relative;
+    animation: wave 2s infinite linear;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1) rotate(-45deg); }
+    50% { transform: scale(1.1) rotate(-45deg); }
+}
+
+@keyframes wave {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 200px; }
+}

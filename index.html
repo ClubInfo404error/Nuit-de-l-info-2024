@@ -1,16 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuit de l'info</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Intégration Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuit de l'info</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Intégration Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="scripts/general_scripts.js"></script>
 </head>
-<body>
-    Page d'accueil
+
+<body class="bg-primary text-white">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #006994, #003366);">
+      <div class="container-fluid">
+        <a class="navbar-brand titre" href="/www/">CESI ton sommeil</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="neurologie.html">Neurologie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="circulation.html">Circulation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="respiration.html">Respiration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bonus/bonus.html">Bonus</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  <!-- Arrière-plan dégradé -->
+  <div class="container-fluid min-vh-100 d-flex flex-column justify-content-center"
+    style="background: linear-gradient(to bottom, #0099ff, #001f4d);">
+    <!-- Contenu principal -->
+    <div class="d-flex flex-column justify-content-center align-items-center text-center">
+      <h1 class="display-3 mb-4">Bienvenue à la Nuit de l'Info</h1>
+      <p class="lead mb-4">Explorez les différents niveaux de connaissance</p>
+
+      <!-- Boutons qui redirigent vers d'autres pages -->
+      <div>
+        <a href="neurologie.html" class="btn btn-light btn-lg mb-3">Neurologie</a>
+        <a href="circulation.html" class="btn btn-light btn-lg mb-3">Circulation</a>
+        <a href="respiration.html" class="btn btn-light btn-lg mb-3">Respiration</a>
+        <a href="bonus/bonus.html" class="btn btn-light btn-lg mb-3">Bonus</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="bg-dark text-white text-center py-4 mt-auto">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mb-3 mb-md-0">
+          <h5>Nuit de l'Info</h5>
+          <p>CESI Toulouse, 2024</p>
+        </div>
+      </div>
+      <div>
+        <small>© 2024 Tous droits réservés.</small>
+      </div>
+    </div>
+  </footer>
+
 </body>
+
 </html>

@@ -1,0 +1,20 @@
+body {
+    background-color: #0e4d92; /* Bleu océan profond */
+    color: #ffffff; /* Texte blanc pour un bon contraste */
+    font-family: 'Arial', sans-serif;
+}
+h1, h2 {
+    color: #00d1e0; /* Bleu turquoise clair */
+}
+.card {
+    background-color: #023e73; /* Fond bleu foncé pour les cartes */
+    border: none;
+    color: #ffffff;
+}
+.boutons-nav {
+    color: #00d1e0; /* Couleur turquoise pour les liens */
+}
+.boutons-nav:hover {
+    text-decoration: underline;
+    color: #007a9c;
+}
