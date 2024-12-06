@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,35 +9,55 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
+
     <!-- Gradient background style -->
     <style>
         body {
-            background: url('images/respiration/plan_lif.jpg') no-repeat center center fixed; /* Background image */
-            background-size: cover; /* Stretch image to cover entire screen */
-            color: rgb(2, 1, 9); /* Text color to ensure readability */
+            background: url('images/respiration/plan_lif.jpg') no-repeat center center fixed;
+            /* Background image */
+            background-size: cover;
+            /* Stretch image to cover entire screen */
+            color: rgb(2, 1, 9);
+            /* Text color to ensure readability */
         }
 
         /* Adding black frame to the canvas */
         #gameCanvas {
-            background-color: rgba(0, 0, 0, 0.2); /* Slight transparent dark background for the canvas */
-            border: 5px solid black; /* Black frame */
-            padding: 10px; /* Optional: Adds a bit of space between the canvas and the frame */
+            background-color: rgba(0, 0, 0, 0.2);
+            /* Slight transparent dark background for the canvas */
+            border: 5px solid black;
+            /* Black frame */
+            padding: 10px;
+            /* Optional: Adds a bit of space between the canvas and the frame */
         }
     </style>
 </head>
+
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Phytoplancton Game</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#gameCanvas">Jouer</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #006994, #003366);">
+        <div class="container-fluid">
+            <a class="navbar-brand titre" href="/www/">CESI ton sommeil</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/www/neurologie.html">Neurologie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/www/circulation.html">Circulation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/www/respiration.html">Respiration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/www/bonus/bonus.html">Bonus</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -56,7 +77,8 @@
         <!-- Score and Progress -->
         <h3 id="score">Oxygène produit : 0</h3>
         <div class="progress mx-auto my-3" style="width: 50%;">
-            <div id="oxygenBar" class="progress-bar bg-success" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            <div id="oxygenBar" class="progress-bar bg-success" role="progressbar" style="width: 50%;"
+                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
 
         <!-- Game Over Message -->
@@ -69,21 +91,34 @@
     </div>
 
     <!-- About Section -->
-    <section id="about" class="container mt-5" style="background-color: rgba(255, 255, 255, 0.7);border-radius: 15px;padding-bottom: 1%; padding-top: 1%;">
+    <section id="about" class="container mt-5"
+        style="background-color: rgba(255, 255, 255, 0.7);border-radius: 15px;padding-bottom: 1%; padding-top: 1%;">
         <h2>À propos du jeu</h2>
-        <p>Ce jeu met en avant le rôle crucial du phytoplancton dans la production d'oxygène et les défis auxquels il est confronté face au réchauffement climatique et à la pollution marine.</p>
+        <p>Ce jeu met en avant le rôle crucial du phytoplancton dans la production d'oxygène et les défis auxquels il
+            est confronté face au réchauffement climatique et à la pollution marine.</p>
 
         <!-- New paragraph about phytoplankton's role in CO2 to O2 conversion -->
         <h2>Le rôle du phytoplancton</h2>
-        <p>Le phytoplancton joue un rôle vital dans la conversion du dioxyde de carbone (CO2) en oxygène (O2). En effectuant la photosynthèse, il absorbe le CO2 présent dans l'atmosphère et libère de l'oxygène, fournissant ainsi une part importante de l'oxygène de notre planète. En fait, le phytoplancton est souvent appelé les "poumons du monde" en raison de sa capacité à purifier l'air et à maintenir l'équilibre de l'atmosphère terrestre.</p>
+        <p>Le phytoplancton joue un rôle vital dans la conversion du dioxyde de carbone (CO2) en oxygène (O2). En
+            effectuant la photosynthèse, il absorbe le CO2 présent dans l'atmosphère et libère de l'oxygène, fournissant
+            ainsi une part importante de l'oxygène de notre planète. En fait, le phytoplancton est souvent appelé les
+            "poumons du monde" en raison de sa capacité à purifier l'air et à maintenir l'équilibre de l'atmosphère
+            terrestre.</p>
 
-        <p>Imaginez que les poumons humains consomment de l'oxygène et produisent du dioxyde de carbone. Les phytoplanctons, quant à eux, agissent comme l'antidote naturel : ils consomment le dioxyde de carbone et produisent de l'oxygène. Ensemble, les poumons et les phytoplanctons forment une équipe parfaite : là où les poumons ne peuvent qu'absorber l'oxygène et libérer du CO2, les phytoplanctons prennent le relais en absorbant le CO2 pour libérer l'oxygène. C'est un échange parfait, un équilibre naturel qui soutient la vie sur Terre.</p>
+        <p>Imaginez que les poumons humains consomment de l'oxygène et produisent du dioxyde de carbone. Les
+            phytoplanctons, quant à eux, agissent comme l'antidote naturel : ils consomment le dioxyde de carbone et
+            produisent de l'oxygène. Ensemble, les poumons et les phytoplanctons forment une équipe parfaite : là où les
+            poumons ne peuvent qu'absorber l'oxygène et libérer du CO2, les phytoplanctons prennent le relais en
+            absorbant le CO2 pour libérer l'oxygène. C'est un échange parfait, un équilibre naturel qui soutient la vie
+            sur Terre.</p>
 
         <!-- Modal Trigger -->
-        <button type="button" class="btn btn-info mt-3" data-toggle="modal" data-target="#infoModal">En savoir plus</button>
+        <button type="button" class="btn btn-info mt-3" data-toggle="modal" data-target="#infoModal">En savoir
+            plus</button>
 
         <!-- Modal -->
-        <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -93,7 +128,8 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        Le phytoplancton produit environ 50% de l'oxygène terrestre et joue un rôle crucial dans l'équilibre des écosystèmes marins.
+                        Le phytoplancton produit environ 50% de l'oxygène terrestre et joue un rôle crucial dans
+                        l'équilibre des écosystèmes marins.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
@@ -104,8 +140,18 @@
     </section>
 
     <!-- Footer -->
-    <footer class="text-center mt-5 py-3 bg-dark text-white">
-        &copy; 2024 Phytoplancton Game - Tous droits réservés.
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-3 mb-md-0">
+                    <h5>Nuit de l'Info</h5>
+                    <p>CESI Toulouse, 2024</p>
+                </div>
+            </div>
+            <div>
+                <small>© 2024 Tous droits réservés.</small>
+            </div>
+        </div>
     </footer>
 
     <!-- Bootstrap JS and Dependencies -->
@@ -116,4 +162,5 @@
     <!-- Game Script -->
     <script src="./scripts/respiration/script.js"></script>
 </body>
+
 </html>

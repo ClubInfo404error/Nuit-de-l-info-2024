@@ -60,14 +60,14 @@ document.getElementById("start-crisis").addEventListener("click", () => {
 
 // Fonction pour jouer le son d'explosion
 function playExplosionSound() {
-    const explosionAudio = new Audio('../../audio/explosion.mp3'); // Remplacez le chemin par celui du fichier son
+    const explosionAudio = new Audio('/www/audio/explosion.mp3'); // Remplacez le chemin par celui du fichier son
     explosionAudio.play();
 }
 
 // Fonction pour changer l'image du cœur en GIF explosif
 function changeHeartToExplosion() {
     const heartImage = document.getElementById("human-heart");
-    heartImage.src = "../../images/circulation/heart_attack.gif"; // Remplacez par le chemin de votre GIF explosif
+    heartImage.src = "/www/images/circulation/heart_attack.gif"; // Remplacez par le chemin de votre GIF explosif
     heartImage.alt = "Explosion!";
 }
 
