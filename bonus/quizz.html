@@ -3,9 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nuit de l'info - Quizz Cyber</title>
+    <style>
+        body {
+            background-image: url('https://www.genetec.com/binaries/content/gallery/illustrationstock_cyberthreats-recolored_adobestock_422696329.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 15px;
+            width: 70%;
+            max-width: 900px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #4CAF50;
+            font-weight: normal;
+        }
+        .question {
+            margin-bottom: 30px;
+        }
+        .options {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .options input {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        .submit-button {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px 20px;
+            font-size: 1.2em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+        .question h2 {
+            font-size: 1.3em;
+            color: #66B3FF;
+        }
+        .container .question:last-child {
+            margin-bottom: 0;
+        }
+        .container h2 {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #007BFF;
+        }
+    </style>
 </head>
 <body>
-    Quizz
+    <div class="container">
+        <h1>Que le quizz cyber commence !</h1>
+        <h2>---Bases de la cybersécurité---</h2>
+
+        <div class="question">
+            <h2>Question n°1 : Qu'est-ce que la cybersécurité et pourquoi est-elle importante dans notre monde connecté ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q1" value="A"> A. Elle se limite à la protection des emails.</label><br>
+                <label><input type="radio" name="q1" value="B"> B. Elle vise à protéger les systèmes informatiques et les données contre les attaques.</label><br>
+                <label><input type="radio" name="q1" value="C"> C. Elle est uniquement destinée aux entreprises de technologie.</label><br>
+                <label><input type="radio" name="q1" value="D"> D. Elle n’est nécessaire que pour les gouvernements.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Question n°2 : Quelle est la différence entre un virus informatique et un malware ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A"> A. Un virus est une forme spécifique de malware.</label><br>
+                <label><input type="radio" name="q2" value="B"> B. Un malware est uniquement un logiciel antivirus.</label><br>
+                <label><input type="radio" name="q2" value="C"> C. Un virus ne peut pas se propager d'un ordinateur à un autre.</label><br>
+                <label><input type="radio" name="q2" value="D"> D. Malware et virus signifient la même chose.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Question n°3 : Qu'est-ce qu'un pare-feu et comment protège-t-il un réseau ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q3" value="A"> A. Il supprime tous les fichiers suspects.</label><br>
+                <label><input type="radio" name="q3" value="B"> B. Il stocke les mots de passe des utilisateurs.</label><br>
+                <label><input type="radio" name="q3" value="C"> C. Il crypte tous les emails automatiquement.</label><br>
+                <label><input type="radio" name="q3" value="D"> D. Il filtre le trafic entrant et sortant selon des règles prédéfinies.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Question n°4 : Quels sont les principaux objectifs de la cybersécurité ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q4" value="A"> A. Protéger la confidentialité, l'intégrité et la disponibilité des informations.</label><br>
+                <label><input type="radio" name="q4" value="B"> B. Sauvegarder uniquement les fichiers multimédia.</label><br>
+                <label><input type="radio" name="q4" value="C"> C. Développer des applications plus rapidement.</label><br>
+                <label><input type="radio" name="q4" value="D"> D. Supprimer les virus manuellement.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Question n°5 : Qu'est-ce qu'une attaque par phishing ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q5" value="A"> A. Une attaque où un pirate utilise des leurres pour obtenir des informations personnelles.</label><br>
+                <label><input type="radio" name="q5" value="B"> B. Une attaque qui utilise des virus pour détruire des serveurs.</label><br>
+                <label><input type="radio" name="q5" value="C"> C. Un moyen de pirater des applications bancaires sans mot de passe.</label><br>
+                <label><input type="radio" name="q5" value="D"> D. Un type de cryptage avancé pour protéger les fichiers.</label>
+            </div>
+        </div>
+
+        <h2>---Menaces courantes---</h2>
+
+        <div class="question">
+            <h2>Question n°6 : Quels sont les signes indiquant que votre ordinateur pourrait être infecté ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q6" value="A"> A. L'ordinateur fonctionne parfaitement.</label><br>
+                <label><input type="radio" name="q6" value="B"> B. Apparition de fenêtres pop-up inhabituelles et ralentissements.</label><br>
+                <label><input type="radio" name="q6" value="C"> C. Votre connexion Wi-Fi est rapide.</label><br>
+                <label><input type="radio" name="q6" value="D"> D. Vos fichiers sont automatiquement sauvegardés.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Question n°7 : Qu'est-ce qu'une attaque par ransomware ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q7" value="A"> A. Une méthode pour pirater des comptes de médias sociaux.</label><br>
+                <label><input type="radio" name="q7" value="B"> B. Une technique pour récupérer des fichiers supprimés.</label><br>
+                <label><input type="radio" name="q7" value="C"> C. Une attaque qui bloque l’accès à vos données en demandant une rançon.</label><br>
+                <label><input type="radio" name="q7" value="D"> D. Une façon de crypter vos emails.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Question n°8 : Comment fonctionne une attaque par déni de service (DDoS) ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q8" value="A"> A. En envoyant un nombre excessif de requêtes pour surcharger un serveur.</label><br>
+                <label><input type="radio" name="q8" value="B"> B. En piratant des mots de passe à distance.</label><br>
+                <label><input type="radio" name="q8" value="C"> C. En supprimant des fichiers système.</label><br>
+                <label><input type="radio" name="q8" value="D"> D. En cryptant les données des utilisateurs.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Question n°9 : Qu'est-ce qu'une attaque par déni de service (DDoS) ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q9" value="A"> A. Une attaque visant à surcharger un réseau pour le rendre indisponible.</label><br>
+                <label><input type="radio" name="q9" value="B"> B. Un virus qui détruit les bases de données.</label><br>
+                <label><input type="radio" name="q9" value="C"> C. Une technique de phishing avancée.</label><br>
+                <label><input type="radio" name="q9" value="D"> D. Une attaque ciblée contre un utilisateur unique.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Question n°10 : Quelle est la définition de ransomware ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q10" value="A"> A. Un logiciel qui demande une rançon pour restaurer l'accès aux fichiers.</label><br>
+                <label><input type="radio" name="q10" value="B"> B. Un logiciel permettant la communication entre réseaux.</label><br>
+                <label><input type="radio" name="q10" value="C"> C. Un outil pour crypter les données d’un serveur.</label><br>
+                <label><input type="radio" name="q10" value="D"> D. Un virus créé pour détecter des mots de passe.</label>
+            </div>
+        </div>
+        
+        <h2>---Pratiques sécuritaires---</h2>
+
+        <div class="question">
+            <h2>Question n°11 : Que signifie l'attaque "Man in the Middle" (MITM) ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q11" value="A"> A. Une interception de communication entre deux parties pour voler des données.</label><br>
+                <label><input type="radio" name="q11" value="B"> B. Un virus dans les pièces jointes.</label><br>
+                <label><input type="radio" name="q11" value="C"> C. Un outil pour sécuriser des transactions en ligne.</label><br>
+                <label><input type="radio" name="q11" value="D"> D. Une technique qui crypte les emails.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Question n°12 : Qu'est-ce qu'un cheval de Troie en cybersécurité ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q12" value="A"> A. Un programme malveillant déguisé en logiciel légitime.</label><br>
+                <label><input type="radio" name="q12" value="B"> B. Un virus utilisé pour briser les pare-feux.</label><br>
+                <label><input type="radio" name="q12" value="C"> C. Un système de défense antivirus.</label><br>
+                <label><input type="radio" name="q12" value="D"> D. Un outil de filtrage de contenu web.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Question n°13 : Comment se protège-t-on contre les attaques de phishing ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q13" value="A"> A. En vérifiant l’authenticité des emails et en évitant les liens suspects.</label><br>
+                <label><input type="radio" name="q13" value="B"> B. En supprimant automatiquement tous les emails.</label><br>
+                <label><input type="radio" name="q13" value="C"> C. En téléchargeant des antivirus gratuits.</label><br>
+                <label><input type="radio" name="q13" value="D"> D. En partageant des mots de passe dans des groupes sécurisés.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Question n°14 : Quel est le rôle du chiffrement en cybersécurité ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q14" value="A"> A. Protéger les données en les rendant illisibles pour les non-autorisés.</label><br>
+                <label><input type="radio" name="q14" value="B"> B. Supprimer les fichiers malveillants automatiquement.</label><br>
+                <label><input type="radio" name="q14" value="C"> C. Surveiller le trafic web.</label><br>
+                <label><input type="radio" name="q14" value="D"> D. Partager les données entre plusieurs utilisateurs.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Question n°15 : Qu'est-ce qu'une vulnérabilité Zero-Day ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q15" value="A"> A. Une faille de sécurité non découverte et exploitée immédiatement.</label><br>
+                <label><input type="radio" name="q15" value="B"> B. Une technique de surveillance avancée.</label><br>
+                <label><input type="radio" name="q15" value="C"> C. Une mise à jour automatique des antivirus.</label><br>
+                <label><input type="radio" name="q15" value="D"> D. Un programme de gestion de mots de passe.</label>
+            </div>
+        </div>
+        
+        <h2>---Législation et éthique---</h2>
+
+        <div class="question">
+            <h2>Question n°16 : Qu'est-ce que le RGPD ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q16" value="A"> A. Une réglementation européenne protégeant les données personnelles.</label><br>
+                <label><input type="radio" name="q16" value="B"> B. Un logiciel antivirus.</label><br>
+                <label><input type="radio" name="q16" value="C"> C. Un protocole de messagerie.</label><br>
+                <label><input type="radio" name="q16" value="D"> D. Une technique de piratage avancée.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Question n°17 : Quelles sont les conséquences légales du piratage ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q17" value="A"> A. Une simple amende de 5 €.</label><br>
+                <label><input type="radio" name="q17" value="B"> B. Aucun impact légal.</label><br>
+                <label><input type="radio" name="q17" value="C"> C. Amendes, peines de prison et casier judiciaire.</label><br>
+                <label><input type="radio" name="q17" value="D"> D. Une suspension temporaire d’Internet.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Question n°18 : Qu'est-ce que l'ingénierie sociale ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q18" value="A"> A. Créer des codes malveillants.</label><br>
+                <label><input type="radio" name="q18" value="B"> B. Manipuler des individus pour obtenir des informations sensibles.</label><br>
+                <label><input type="radio" name="q18" value="C"> C. Attaquer un serveur sans son consentement.</label><br>
+                <label><input type="radio" name="q18" value="D"> D. Filtrer le trafic réseau de façon automatisée.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Question n°19 : Quelle est l'importance de la mise à jour régulière des systèmes ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q19" value="A"> A. Corriger des failles de sécurité et améliorer la performance.</label><br>
+                <label><input type="radio" name="q19" value="B"> B. Éviter les sauvegardes automatiques.</label><br>
+                <label><input type="radio" name="q19" value="C"> C. Supprimer toutes les données inutiles.</label><br>
+                <label><input type="radio" name="q19" value="D"> D. Désactiver les logiciels antivirus.</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>Question n°20 : Comment la sensibilisation des employés réduit-elle les risques ?</h2>
+            <div class="options">
+                <label><input type="radio" name="q20" value="A"> A. Coordonner les efforts et définir des normes.</label><br>
+                <label><input type="radio" name="q20" value="B"> B. Développer exclusivement des pare-feu.</label><br>
+                <label><input type="radio" name="q20" value="C"> C. Surveiller uniquement les sites web sociaux.</label><br>
+                <label><input type="radio" name="q20" value="D"> D. Pirater les systèmes d’autres pays.</label>
+            </div>
+        </div>
+
+        <button class="submit-button" onclick="validateQuiz()">Valider</button>
+    </div>
+
+    <script>
+        function validateQuiz() {
+            let correctAnswers = {
+                q1: "B", q2: "A", q3: "D", q4: "A", q5: "A",
+                q6: "B", q7: "C", q8: "A", q9: "C", q10: "B",
+                q11: "A", q12: "D", q13: "D", q14: "B", q15: "C",
+                q16: "A", q17: "C", q18: "B", q19: "B", q20: "A"
+            };
+
+            let score = 0;
+            let totalQuestions = Object.keys(correctAnswers).length;
+
+            for (let question in correctAnswers) {
+                let selected = document.querySelector(`input[name="${question}"]:checked`);
+                if (selected && selected.value === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            alert(`Vous avez obtenu ${score} réponses correctes sur ${totalQuestions}.`);
+        }
+    </script>
 </body>
 </html>
