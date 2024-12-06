@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #3586ff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* display: flex; */
+}
+
+h1 {
+    font-size: 500%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    /* -webkit-text-stroke: 3px white; */
+    text-align: center;
+}
+
+
+
+
+
+.lis1t-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 60vh;
+    .list-t {
+        list-style: none;
+        border: 2px solid rgb(255, 255, 255);
+        padding: 20px;
+
+        li {
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: white;
+        }
+    }
+}
+
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url(../../images/neurologie/wave.png);
+    background-size: 1000px 100px;
+}
+
+button {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    filter: drop-shadow(0 0 20px darkblue)
+}
+
+
+
+.wave.wave1 {
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+.wave.wave2 {
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+.wave.wave3 {
+    animation: animate 15s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+
+.wave.wave4 {
+    animation: animate2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -2s;
+    bottom: 20px;
+}
+
+
+@keyframes animate {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+.btn {
+    font-family: arial;
+    letter-spacing: 2px;
+    font-size: 22px;
+    text-transform: uppercase;
+    background: #8d51fc;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 20px 24px;
+    box-shadow: 0 0 60px -10px #4610cd;
+    transition: all .3s;
+    text-decoration: none;
+}
+
