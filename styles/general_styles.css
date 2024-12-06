@@ -11,10 +11,10 @@ h1, h2 {
     border: none;
     color: #ffffff;
 }
-a {
+.boutons-nav {
     color: #00d1e0; /* Couleur turquoise pour les liens */
 }
-a:hover {
+.boutons-nav:hover {
     text-decoration: underline;
     color: #007a9c;
 }
