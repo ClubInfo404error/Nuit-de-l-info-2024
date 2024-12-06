@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carte de Crédit</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <title>Page Crédit</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Intégration Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #4facfe, #00f2fe);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
 
         .credit-card {
             width: 300px;
@@ -22,6 +24,14 @@
             perspective: 1000px;
         }
 
+        .contenu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
         .card-content {
             width: 100%;
             height: 100%;
@@ -61,70 +71,97 @@
         }
     </style>
 </head>
+
 <body>
-<div class="container text-center">
-    <div class="credit-card">
-        <div class="card-content" id="creditCard">
-            <div class="front" id="front">
-                <h4>Banque XYZ</h4>
-                <p class="fw-bold fs-5">1234 5678 9012 3456</p>
-                <p class="text-uppercase">Nom du Titulaire</p>
-                <p>EXP: 12/25</p>
+    <nav class="navbar navbar-expand-lg navbar-dark"
+            style="background: linear-gradient(to right, #006994, #003366);">
+            <div class="container-fluid">
+                <a class="navbar-brand titre" href="/www/index.html">CESI ton sommeil</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/www/neurologie.html">Neurologie</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/www/circulation.html">Circulation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/www/respiration.html">Respiration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/www/bonus/bonus.html">Bonus</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="back">
-                <p class="fs-4" id="backText"></p>
+        </nav>
+        <div class="contenu">
+            <div class="credit-card">
+                <div class="card-content" id="creditCard">
+                    <div class="front" id="front">
+                        <h4>Banque XYZ</h4>
+                        <p class="fw-bold fs-5">1234 5678 9012 3456</p>
+                        <p class="text-uppercase">Nom du Titulaire</p>
+                        <p>EXP: 12/25</p>
+                    </div>
+                    <div class="back">
+                        <p class="fs-4" id="backText"></p>
+                    </div>
+                </div>
             </div>
+            <button class="btn btn-primary" onclick="rotateCard()">Tourner la carte</button>
         </div>
-    </div>
-    <button class="btn btn-primary" onclick="rotateCard()">Tourner la carte</button>
-</div>
-
-<script>
-    let rotationCount = 0;
-    const contributors = [
-        "Vieira Steven",
-        "GUERRO RAPHAËL",
-        "BORTOLUSSI DIEGO",
-        "CASSE ENZO",
-        "MELEIRO-GONZALEZ PABLO",
-        "VOGEL MATHIS",
-        "SASTRE ISAAC",
-        "RENARD FLORIAN",
-        "BOURLET BENJAMIN",
-        "PIRON MARTIN",
-        "NGUEGUIM",
-        "ASIN CHRISTOPHER",
-        "GORDIEN ALEXIS",
-        "RAVAUX MAXIME",
-        "MENETRIER JASMINE",
-        "ELLIOTT BLAISE",
-        "TCHEN MOMBOT BOULLARD HUGO"
-    ];
-    const card = document.getElementById('creditCard');
-    const backText = document.getElementById('backText');
-    const front = document.getElementById('front');
-
-    function rotateCard() {
-        rotationCount++;
-
-        if (rotationCount === 1) { 
-            // Premier clic : Montre le dos avec "Un Grand remerciment à :"
-            card.style.transform = 'rotateY(180deg)';
-            backText.textContent = "Un Grand remerciment à :";
-        } else if (rotationCount <= contributors.length + 1) { 
-            // Clics suivants : Affiche les contributeurs un par un
-            backText.textContent = contributors[rotationCount - 2];
-        } else {
-            // Après tous les contributeurs : Continue à les afficher en boucle
-            card.style.transform = 'rotateY(180deg)';
-            backText.textContent = contributors[(rotationCount - 2) % contributors.length];
-        }
-
-        // Supprime définitivement le devant après le premier clic
-        if (rotationCount > 1) {
-            front.style.display = 'none';
-        }
-    }
-</script>
+        
+        <script>
+            let rotationCount = 0;
+            const contributors = [
+                "Vieira Steven",
+                "GUERRO RAPHAËL",
+                "BORTOLUSSI DIEGO",
+                "CASSE ENZO",
+                "MELEIRO-GONZALEZ PABLO",
+                "VOGEL MATHIS",
+                "SASTRE ISAAC",
+                "RENARD FLORIAN",
+                "BOURLET BENJAMIN",
+                "PIRON MARTIN",
+                "NGUEGUIM",
+                "ASIN CHRISTOPHER",
+                "GORDIEN ALEXIS",
+                "RAVAUX MAXIME",
+                "MENETRIER JASMINE",
+                "ELLIOTT BLAISE",
+                "TCHEN MOMBOT BOULLARD HUGO"
+            ];
+            const card = document.getElementById('creditCard');
+            const backText = document.getElementById('backText');
+            const front = document.getElementById('front');
+        
+            function rotateCard() {
+                rotationCount++;
+        
+                if (rotationCount === 1) { 
+                    // Premier clic : Montre le dos avec "Un Grand remerciment à :"
+                    card.style.transform = 'rotateY(180deg)';
+                    backText.textContent = "Un Grand remerciment à :";
+                } else if (rotationCount <= contributors.length + 1) { 
+                    // Clics suivants : Affiche les contributeurs un par un
+                    backText.textContent = contributors[rotationCount - 2];
+                } else {
+                    // Après tous les contributeurs : Continue à les afficher en boucle
+                    card.style.transform = 'rotateY(180deg)';
+                    backText.textContent = contributors[(rotationCount - 2) % contributors.length];
+                }
+        
+                // Supprime définitivement le devant après le premier clic
+                if (rotationCount > 1) {
+                    front.style.display = 'none';
+                }
+            }
+        </script>
 </body>
 </html>
