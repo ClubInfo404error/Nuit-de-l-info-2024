@@ -360,6 +360,7 @@
                     fishPositions.splice(i, 1);
 
                     if (phoneNumber.length === 9) endGame();
+
                 }
             }
         }
@@ -374,6 +375,8 @@
             canvas.style.display = 'none';
             validateBox.style.display = 'block';
             finalNumberDisplay.textContent = `Votre numéro : ${selectedCountryCode} ${phoneNumber}`;
+            scoreBoard.style.display = 'none';
+
         }
 
         function validateNumber() {
