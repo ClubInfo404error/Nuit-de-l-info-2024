@@ -18,6 +18,49 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="scripts/general_scripts.js"></script>
+    <style>
+        .super-bouton {
+            background: linear-gradient(45deg, #ffcc00, #ff9900);
+            color: #000000;
+            border: 3px solid #ffcc00;
+            border-radius: 50px; /* Boutons arrondis pour un effet moderne */
+            padding: 12px 24px;
+            font-size: 1.5rem; /* Taille du texte augmentée */
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px; /* Espacement des lettres pour une meilleure lisibilité */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre subtile */
+            transition: all 0.3s ease; /* Transition fluide pour les effets */
+            cursor: pointer;
+          }
+          
+          /* Effet au survol */
+          .super-bouton:hover {
+            background: linear-gradient(45deg, #ff9900, #ffcc00);
+            color: #ffffff; /* Texte en blanc pour le contraste */
+            transform: translateY(-3px) scale(1.05); /* Léger soulèvement et agrandissement */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Intensification de l'ombre */
+          }
+          
+          /* Effet au clic */
+          .super-bouton:active {
+            transform: translateY(2px) scale(0.98); /* Bouton qui s'enfonce légèrement */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Réduction de l'ombre */
+          }
+
+          /* Animation scintillante */
+          @keyframes shine {
+            0%, 100% {
+              opacity: 0;
+              transform: scale(0.5);
+            }
+            50% {
+              opacity: 1;
+              transform: scale(1.5);
+            }
+          }
+          
+    </style>
 </head>
 
 <body class="bg-primary text-white">
@@ -62,7 +105,7 @@
             <!-- Boutons de redirection -->
             <div>
                 <a href="./quizz.html" class="btn btn-success btn-lg mb-3">🧠 Passer au Quizz</a>
-                <a href="./saisie.html" class="btn btn-info btn-lg mb-3">✍️ Essayez de rédiger quelque chose</a>
+                <a href="./saisie.html" class="btn btn-info btn-lg mb-3">✍️ CESI ton numéro de téléphone</a>
             </div>
 
             <!-- Rajouter des iframes pour des vidéos -->
@@ -82,6 +125,12 @@
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <!-- Rajouter un lien vers les crédits -->
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <a href="./credits.html" class="btn btn-light btn-lg mt-5 super-bouton">📜 Voir les crédits</a>
                     </div>
                 </div>
                 <p class="mt-5 text-muted">* Aucun niveau de stress n'a été augmenté lors de la création de cette page.
