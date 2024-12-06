@@ -269,25 +269,59 @@
 
         <!-- Informations supplémentaires -->
         <section class="text-center mt-5">
-            <h3 id="resources-title" onclick="narrateText('resources-title')">
+            <h3 id="resources-title" class="display-4 font-weight-bold mb-4" onclick="narrateText('resources-title')">
                 Ressources Complémentaires
             </h3>
-            <ul class="list-group list-group-flush">
-                <li id="encyclopedia-resource" class="list-group-item" onclick="narrateText('encyclopedia-resource')">
-                    <a href="https://www.encyclopedie-environnement.org/">Encyclopédie de l'environnement</a> :
-                    Explications approfondies des courants océaniques
-                    et de leur impact.
+            <ul class="list-group list-group-flush mx-auto" style="max-width: 700px;">
+                <li id="encyclopedia-resource" class="list-group-item py-4 px-3 rounded shadow-sm mb-3"
+                    onclick="narrateText('encyclopedia-resource')"
+                    style="background: linear-gradient(135deg, #e0f7fa, #ffffff);">
+                    <a href="https://www.encyclopedie-environnement.org/"
+                        class="font-weight-bold text-primary text-decoration-none" target="_blank">
+                        Encyclopédie de l'environnement
+                    </a>
+                    <p class="mb-0 text-muted">
+                        Explications approfondies des courants océaniques et de leur impact.
+                    </p>
                 </li>
-                <li id="seascape-resource" class="list-group-item" onclick="narrateText('seascape-resource')">
-                    <a href="https://seaescape.fr/">Sea(e)scape</a> : Informations sur le "tapis roulant" thermohalin.
+                <li id="seascape-resource" class="list-group-item py-4 px-3 rounded shadow-sm mb-3"
+                    onclick="narrateText('seascape-resource')"
+                    style="background: linear-gradient(135deg, #e3f2fd, #ffffff);">
+                    <a href="https://seaescape.fr/" class="font-weight-bold text-primary text-decoration-none"
+                        target="_blank">
+                        Sea(e)scape
+                    </a>
+                    <p class="mb-0 text-muted">
+                        Informations sur le "tapis roulant" thermohalin.
+                    </p>
                 </li>
-                <li id="wikipedia-resource" class="list-group-item" onclick="narrateText('wikipedia-resource')">
-                    <a href="https://fr.wikipedia.org/wiki/Circulation_thermohaline">Wikipédia</a> : Vue d'ensemble de
-                    la circulation thermohaline.
+                <li id="wikipedia-resource" class="list-group-item py-4 px-3 rounded shadow-sm mb-3"
+                    onclick="narrateText('wikipedia-resource')"
+                    style="background: linear-gradient(135deg, #e8eaf6, #ffffff);">
+                    <a href="https://fr.wikipedia.org/wiki/Circulation_thermohaline"
+                        class="font-weight-bold text-primary text-decoration-none" target="_blank">
+                        Wikipédia
+                    </a>
+                    <p class="mb-0 text-muted">
+                        Vue d'ensemble de la circulation thermohaline.
+                    </p>
                 </li>
             </ul>
         </section>
     </div>
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <h5>Nuit de l'Info</h5>
+                    <p>CESI Toulouse, 2024</p>
+                </div>
+            </div>
+            <div>
+                <small>© 2024 Tous droits réservés.</small>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
